@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>w - 技术博客</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">w</div>
+      <ul class="nav-links">
+        <li><a href="#">首页</a></li>
+        <li><a href="#">分类</a></li>
+        <li><a href="#">关于</a></li>
+        <li><a href="profile.html">个人信息</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="hero" id="home">
+      <h1>欢迎来到我的技术博客</h1>
+      <p>分享编程经验与技术见解</p>
+    </section>
+
+    <section class="blog-list">
+      <div class="container">
+        <article class="post-card">
+          <div class="post-image">
+            <img src="assets/post1.jpg" alt="文章1">
+          </div>
+          <div class="post-content">
+            <h2>Hadoop集群部署指南</h2>
+            <div class="post-meta">
+              <span class="date">2023-10-15</span>
+              <span class="category">大数据</span>
+            </div>
+            <p>详细讲解如何从零开始部署Hadoop集群，包括HDFS、YARN、Hive和Spark的配置与优化...</p>
+            <a href="post-hadoop.html" class="btn">阅读更多</a>
+          </div>
+        </article>
+
+        <article class="post-card">
+          <div class="post-image">
+            <img src="assets/post2.jpg" alt="文章2">
+          </div>
+          <div class="post-content">
+            <h2>Python自动化办公实战</h2>
+            <div class="post-meta">
+              <span class="date">2023-09-28</span>
+              <span class="category">Python</span>
+            </div>
+            <p>使用Python实现日常办公自动化，包括Excel处理、邮件发送、文件管理等实用技巧...</p>
+            <a href="post-python.html" class="btn">阅读更多</a>
+          </div>
+        </article>
+
+        <article class="post-card">
+          <div class="post-image">
+            <img src="assets/post3.jpg" alt="文章3">
+          </div>
+          <div class="post-content">
+            <h2>AI图像识别入门</h2>
+            <div class="post-meta">
+              <span class="date">2023-08-10</span>
+              <span class="category">人工智能</span>
+            </div>
+            <p>从零开始学习AI图像识别，使用TensorFlow实现简单的图像分类模型...</p>
+            <a href="post-ai.html" class="btn">阅读更多</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container">
+        <h2>关于博主</h2>
+        <div class="content">
+          <div class="text">
+            <p>我是w，一名热爱技术的博主。专注于分享编程经验、技术见解和实践案例。</p>
+            <p>擅长领域包括：大数据处理、Python开发、AI应用等。希望通过博客与大家交流学习。</p>
+          </div>
+          <div class="skills">
+            <div class="skill">
+              <div class="skill-name">AI</div>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 90%;"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill-name">Java</div>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 70%"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill-name">Hadoop部署</div>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 75%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
