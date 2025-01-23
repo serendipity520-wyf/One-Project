@@ -440,40 +440,6 @@ nav {
   border: 1px solid var(--border-color);
   position: relative;
   overflow: hidden;
-}
-
-.profile-content::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: conic-gradient(
-    from 90deg,
-    transparent,
-    rgba(41, 98, 255, 0.1),
-    transparent
-  );
-  animation: rotate 6s linear infinite;
-  z-index: 0;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.profile-content > * {
-  position: relative;
-  z-index: 1;
-}
-
-.profile-content {
   display: flex;
   gap: 2rem;
   align-items: flex-start;
@@ -481,6 +447,7 @@ nav {
 
 .profile-photo {
   flex: 0 0 300px;
+  height: 400px;
 }
 
 .profile-photo img {
@@ -491,16 +458,11 @@ nav {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-.profile-photo {
-  flex: 0 0 300px;
-  height: 400px; /* 根据信息框高度调整 */
-}
-
 .profile-info {
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
 
 .info-item {
@@ -509,6 +471,7 @@ nav {
   padding: 1rem;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 5px;
+  border: 1px solid var(--border-color);
 }
 
 .label {
@@ -520,6 +483,7 @@ nav {
 
 .value {
   color: var(--text-color);
+  word-break: break-word;
 }
 
 /* 响应式设计 */
@@ -565,19 +529,36 @@ nav {
   }
 
   /* 个人信息页面响应式 */
+  .profile {
+    padding: 4rem 1rem;
+  }
+
   .profile-content {
     flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
   }
 
   .profile-photo {
-    flex: 0 0 auto;
+    flex: none;
     width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
+    height: 300px;
+    margin-bottom: 1rem;
   }
 
   .profile-info {
-    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 0.5rem;
+  }
+
+  .label {
+    margin-right: 0;
   }
 
   /* 容器padding调整 */
@@ -603,6 +584,22 @@ nav {
   .about {
     margin: 1rem;
     padding: 3rem 0;
+  }
+
+  .profile {
+    padding: 3rem 0.5rem;
+  }
+
+  .profile-content {
+    margin: 0.5rem;
+  }
+
+  .profile-photo {
+    height: 250px;
+  }
+
+  .info-item {
+    padding: 0.8rem;
   }
 }
 
